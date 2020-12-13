@@ -1,3 +1,5 @@
+let wd = require('wd');
+
 exports.config = {
     commonCapabilities: {
       project: "First Webdriverio Android Project",
@@ -22,3 +24,12 @@ exports.config = {
       caps[i] = caps[i] || exports.config.commonCapabilities[i];
     }
   });
+
+driver = wd.promiseRemote("http://hub-cloud.browserstack.com/wd/hub");
+
+driver.init(desiredCaps)
+  //  Write your code here
+  .fin(function() {
+return driver.quit(); })
+  .done();
+

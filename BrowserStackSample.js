@@ -21,6 +21,7 @@ desiredCaps = {
   'browserstack.networkLogs': 'true',
   'browserstack.deviceLogs': 'true',
   'browserstack.appiumLogs': 'true',
+  'browserstack.debug': 'true'
 };
 
 
@@ -53,9 +54,7 @@ driver = wd.promiseRemote("http://hub-cloud.browserstack.com/wd/hub");
         });
     });
 
-
   });
-
 
 
 
